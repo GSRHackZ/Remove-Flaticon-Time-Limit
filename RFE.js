@@ -16,19 +16,19 @@
 
 let finished=false;
 
-document.addEventListener('keyup',function(evt){
-    if(evt.ctrlKey && evt.altKey && evt.keyCode==70){
-        if(!finished){
-            let ogSrc=document.getElementsByClassName("main-icon-without-slide pd-lv4 icon-png-container")[0].children[0];
-            if(ogSrc!==undefined){
-                let newSrc=ogSrc.src.split("svg/vstatic/")[0]+ogSrc.src.split("svg/vstatic/")[1].split("?")[0];
-                ogSrc.parentNode.style="transition:.6s;opacity:0%;";
-                ogSrc.src=newSrc;
+setInterval(function(){
+    let ogSrc=document.getElementsByClassName("main-icon-without-slide pd-lv4 icon-png-container")[0].children[0];
+    if(ogSrc!==undefined){
+        let newSrc=ogSrc.src.split("svg/vstatic/")[0]+ogSrc.src.split("svg/vstatic/")[1].split("?")[0];
+        ogSrc.parentNode.addEventListener("click",function(){
+            if(!finished){
+                this.style="transition:.6s;opacity:0%;";
+                this.src=newSrc;
                 setTimeout(function(){
                     ogSrc.parentNode.style="transition:.6s;opacity:100%;";
                     finished=true;
                 },1000)
             }
-        }
+        })
     }
-})
+},500)
