@@ -1,4 +1,4 @@
-# Remove Flaticon Expiration ⌚
+# Remove Flaticon Time Limit ⌚
 Takes away time limit for free Flaticon icons.
 
 <h3>Steps for use: </h3>
