@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Remove Flaticon Expiration
 // @namespace    http://tampermonkey.net/
-// @version      1.0
+// @version      2.0
 // @description  Takes away time expiration from images.
 // @author       GSRHackZ
 // @match        https://www.flaticon.com/free-icon/*
@@ -23,7 +23,7 @@ setInterval(function(){
         ogSrc.parentNode.addEventListener("click",function(){
             if(!finished){
                 this.style="transition:.6s;opacity:0%;";
-                this.src=newSrc;
+                ogSrc.src=newSrc;
                 setTimeout(function(){
                     ogSrc.parentNode.style="transition:.6s;opacity:100%;";
                     finished=true;
@@ -32,3 +32,4 @@ setInterval(function(){
         })
     }
 },500)
+
