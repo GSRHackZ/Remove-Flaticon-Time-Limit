@@ -13,6 +13,7 @@ Takes away time limit for free Flaticon icons.
 <h3>Key points:</h3>
 <ul style="margin-bottom:10px;">
 <li>This takes away the time limit for the <b>free</b> flaticon icons. 💸</li><br>
+  <li>if it doesn't work the first time, refresh and try again. This is usually because the icon is being loaded asynchronously. 🔄</li><br>
 </ul>
 
 <h3>Please consider:</h3>
